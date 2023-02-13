@@ -1,42 +1,15 @@
 <template>
-  <div>
-    <DynamicLink :animalComponent="selectedAnimal" :key="selectedAnimal" /> 
-    <!-- key is for force update DynamicLink component -->
-    <select v-model="selectedAnimal">
-      <option value="" selected="selected"> </option>
-      <option value="birds">birds</option>
-      <option value="cats">cats</option>
-      <option value="dogs">dogs</option>
-    </select>
-  </div>
+  <DynamicTemplate></DynamicTemplate>
+  <HelloRenderFunction />
+  <RenderFunctionExample msg="This is a test"></RenderFunctionExample>
+  <JsxComponent />
+  
 </template>
+<script setup>
+  import JsxComponent from '@/components/JsxComponent.jsx'
+  import DynamicTemplate from '@/components/DynamicTemplate.vue'
+  import RenderFunctionExample from '@/components/RenderFunctionExample.js'
+  import HelloRenderFunction from '@/components/HelloRenderFunction.js'
+  // import CompiledTemplate from '@/components/CompiledTemplate.js'
 
-<script>
-import DynamicLink from "@/components/DynamicLink.vue";
-
-export default {
-  name: "App",
-  data() {
-    return {
-      selectedAnimal: 'default',
-    }
-  },
-  components: {
-    DynamicLink,
-  },
-};
 </script>
-
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-select {
-  font-size: 20px;
-}
-</style>
