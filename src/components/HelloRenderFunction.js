@@ -1,5 +1,5 @@
 export default {
   setup() {
-    return () => 'hello world!'
+    return () => 'hello vue render function world!'
   }
 }

@@ -8,6 +8,6 @@ export default {
   },
   setup(props) {
     const count = ref(1)
-    return () => h('div', 'heelo ' + count.value + props.msg)
+    return () => h('div', 'render function with props and values ' + count.value + props.msg)
   }
 } 
